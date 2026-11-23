@@ -26,7 +26,7 @@ const PRODUCTS = [
     name: "Jaqueta com recortes",
     price: 289.9,
     priceFormatted: "R$ 289,90",
-    image: "/imagem/blusa-masculina.jpg",
+    image: "imagem/blusa-masculina.jpg",
     description:
       "Jaqueta estruturada em azul-marinho com recortes geométricos e fechamento frontal em zíper.",
     sizes: ["P", "M", "G", "GG"],
@@ -46,7 +46,7 @@ const PRODUCTS = [
     name: "Blusa com detalhe atravessado",
     price: 139.99,
     priceFormatted: "R$ 139,99",
-    image: "/imagem/blusa-detalhe.jpg",
+    image: "imagem/blusa-detalhe.jpg",
     description:
       "Blusa bicolor bordô e marinho com recortes diagonais e alças assimétricas.",
     sizes: ["PP", "P", "M", "G"],
@@ -56,7 +56,7 @@ const PRODUCTS = [
     name: "Calça de cós transpassado",
     price: 219.99,
     priceFormatted: "R$ 219,99",
-    image: "/imagem/calca-feminina.jpg",
+    image: "imagem/calca-feminina.jpg",
     description:
       "Calça de modelagem ampla com cós transpassado, amarração frontal e friso lateral bordô.",
     sizes: ["PP", "P", "M", "G"],
