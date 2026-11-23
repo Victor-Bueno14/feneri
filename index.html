@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fenēri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800;9..144,900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <!-- CABEÇALHO -->
+    <header class="site-header" id="site-header">
+      <div class="header-container">
+        <div class="brand-row">
+          <a
+            href="#inicio"
+            class="brand-logo"
+            data-scroll-target="inicio"
+            aria-label="fenēri - Ir para o início"
+          >
+            <svg
+              class="brand-mark"
+              viewBox="0 0 112 110"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M14 14 H36 C45 14 50 18 54 27 L77 82 H88 V98 H64 L48 58 L30 83 H39 V98 H6 V83 H13 L40 42 L34 29 H14 V14 Z"
+                fill="currentColor"
+              />
+              <circle cx="88" cy="30" r="16.5" fill="currentColor" />
+            </svg>
+            <span class="brand-name">fenēri</span>
+          </a>
+        </div>
+
+        <div class="nav-row">
+          <form class="search-box" id="search-form" role="search">
+            <button
+              type="submit"
+              class="search-btn"
+              aria-label="Buscar produtos"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="20" y1="20" x2="16.2" y2="16.2"></line>
+              </svg>
+            </button>
+            <input
+              type="search"
+              id="search-input"
+              class="search-input"
+              placeholder="Buscar..."
+              aria-label="Buscar produtos"
+              autocomplete="off"
+            />
+          </form>
+
+          <nav class="main-nav" aria-label="Navegação principal">
+            <ul class="nav-list">
+              <li>
+                <a
+                  href="#inicio"
+                  class="nav-link active"
+                  data-scroll-target="inicio"
+                  >Início</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#lancamentos"
+                  class="nav-link"
+                  data-scroll-target="lancamentos"
+                  >Lançamentos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#produtos"
+                  class="nav-link"
+                  data-scroll-target="produtos"
+                  >Produtos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#sobre-nos"
+                  class="nav-link"
+                  data-scroll-target="sobre-nos"
+                  >Sobre nós</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header-actions">
+            <button
+              type="button"
+              class="icon-btn cart-trigger"
+              id="open-cart-btn"
+              aria-label="Abrir sacola de compras"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.9"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="9" cy="20" r="1.5"></circle>
+                <circle cx="18" cy="20" r="1.5"></circle>
+                <path
+                  d="M2 3h3l2.4 11.2a1.5 1.5 0 0 0 1.5 1.2h8.8a1.5 1.5 0 0 0 1.4-1.1L21 7H6"
+                ></path>
+              </svg>
+              <span class="cart-badge" id="cart-badge">0</span>
+            </button>
+
+            <button
+              type="button"
+              class="icon-btn account-trigger"
+              id="open-account-btn"
+              aria-label="Minha conta"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.9"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="9.5"></circle>
+                <circle cx="12" cy="9.2" r="3"></circle>
+                <path d="M6.8 18.6a6 6 0 0 1 10.4 0"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1. INÍCIO / VÍDEO -->
+      <section
+        class="hero-section"
+        id="inicio"
+        aria-label="Vídeo de campanha fenēri"
+      >
+        <div class="hero-media-wrapper">
+          <video
+            id="hero-video"
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="assets/img/hero-poster.jpg"
+          >
+            <source src="/video/video.mp4" type="video/mp4" />
+          </video>
+
+          <div class="hero-controls">
+            <button type="button" class="hero-ctrl-btn" id="toggle-play-btn">
+              Pausar vídeo
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. LANÇAMENTOS / CARROSSEL -->
+      <section
+        class="launches-section"
+        id="lancamentos"
+        aria-label="Lançamentos"
+      >
+        <div class="section-container">
+          <div
+            class="carousel-card"
+            id="launches-carousel"
+            tabindex="0"
+            aria-roledescription="carrossel"
+            aria-label="Destaques de lançamento"
+          >
+            <div class="carousel-track" id="carousel-track"></div>
+
+            <button
+              type="button"
+              class="carousel-arrow prev"
+              id="carousel-prev"
+              aria-label="Slide anterior"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              class="carousel-arrow next"
+              id="carousel-next"
+              aria-label="Próximo slide"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+
+            <div
+              class="carousel-dots"
+              id="carousel-dots"
+              role="tablist"
+              aria-label="Selecionar slide"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. PRODUTOS -->
+      <section
+        class="products-section"
+        id="produtos"
+        aria-label="Produtos em destaque"
+      >
+        <div class="section-container">
+          <div class="search-status" id="search-status" hidden>
+            <span id="search-status-text"></span>
+            <button
+              type="button"
+              class="clear-search-btn"
+              id="clear-search-btn"
+            >
+              Limpar filtro
+            </button>
+          </div>
+
+          <div class="collection-header">
+            <span class="collection-tag">Coleção</span>
+            <h2 class="collection-title">Correria</h2>
+          </div>
+
+          <div class="products-grid" id="products-grid"></div>
+        </div>
+      </section>
+
+      <!-- 4. SOBRE NÓS -->
+      <section
+        class="about-section"
+        id="sobre-nos"
+        aria-labelledby="about-heading"
+      >
+        <div class="section-container about-grid">
+          <div class="about-text">
+            <h2 class="about-title" id="about-heading">Sobre nós</h2>
+            <p>
+              A Fenéri nasceu para transformar a maneira de vestir a moda
+              esportiva, unindo conforto, funcionalidade e uma linguagem
+              estética autêntica.
+            </p>
+            <p>
+              Acreditamos na liberdade de movimento, de escolha e de expressão
+              pessoal. Por isso, desenvolvemos peças versáteis que acompanham
+              você em diferentes momentos do dia, do treino aos compromissos do
+              cotidiano.
+            </p>
+          </div>
+
+          <div class="about-media">
+            <img
+              src="/imagem/sobre-nos.jpg"
+              alt="Equipe e modelos vestindo a coleção fenēri"
+              class="about-image"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="site-footer" id="rodape">
+      <div class="section-container footer-grid">
+        <div class="footer-brand">
+          <a
+            href="#inicio"
+            class="brand-logo"
+            data-scroll-target="inicio"
+            aria-label="fenēri - Voltar ao topo"
+          >
+            <svg
+              class="brand-mark"
+              viewBox="0 0 112 110"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M14 14 H36 C45 14 50 18 54 27 L77 82 H88 V98 H64 L48 58 L30 83 H39 V98 H6 V83 H13 L40 42 L34 29 H14 V14 Z"
+                fill="currentColor"
+              />
+              <circle cx="88" cy="30" r="16.5" fill="currentColor" />
+            </svg>
+            <span class="brand-name">fenēri</span>
+          </a>
+          <p class="footer-copy">Vestir para além da academia.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Navegação</h3>
+          <ul class="footer-links">
+            <li><a href="#inicio" data-scroll-target="inicio">Início</a></li>
+            <li>
+              <a href="#lancamentos" data-scroll-target="lancamentos"
+                >Lançamentos</a
+              >
+            </li>
+            <li>
+              <a href="#produtos" data-scroll-target="produtos">Produtos</a>
+            </li>
+            <li>
+              <a href="#sobre-nos" data-scroll-target="sobre-nos">Sobre nós</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Novidades</h3>
+          <p class="footer-text">
+            Receba avisos de próximos drops e lançamentos.
+          </p>
+          <form class="footer-newsletter" id="newsletter-form">
+            <input
+              type="email"
+              id="newsletter-email"
+              class="footer-input"
+              placeholder="Seu melhor e-mail"
+              aria-label="Seu melhor e-mail"
+              required
+            />
+            <button type="submit" class="footer-submit-btn">Cadastrar</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="section-container footer-bottom-inner">
+          <span
+            >&copy; <span id="footer-year">2026</span> fenēri. Todos os direitos
+            reservados.</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- GAVETA DO CARRINHO -->
+    <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+    <aside
+      class="cart-drawer"
+      id="cart-drawer"
+      aria-hidden="true"
+      aria-labelledby="cart-drawer-title"
+    >
+      <div class="drawer-header">
+        <h3 id="cart-drawer-title">Sua sacola</h3>
+        <button
+          type="button"
+          class="close-modal-btn"
+          id="close-cart-btn"
+          aria-label="Fechar sacola"
+        >
+          &times;
+        </button>
+      </div>
+
+      <div class="drawer-body" id="cart-items-container"></div>
+
+      <div class="drawer-footer">
+        <div class="cart-total-row">
+          <span>Total</span>
+          <strong id="cart-total-value">R$ 00,00</strong>
+        </div>
+        <button type="button" class="checkout-btn" id="checkout-btn">
+          Finalizar pedido
+        </button>
+      </div>
+    </aside>
+
+    <!-- MODAL DETALHES / CONTA -->
+    <div
+      class="modal-overlay"
+      id="app-modal"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div class="modal-card">
+        <button
+          type="button"
+          class="close-modal-btn modal-close"
+          id="close-modal-btn"
+          aria-label="Fechar janela"
+        >
+          &times;
+        </button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>
