@@ -32,6 +32,16 @@ const PRODUCTS = [
     sizes: ["P", "M", "G", "GG"],
   },
   {
+    id: "camiseta-bicolor",
+    name: "Camiseta com gola de duas cores",
+    price: 119.9,
+    priceFormatted: "R$ 119,90",
+    image: "imagem/camiseta-masculina.jpg",
+    description:
+      "Camiseta com gola de duas cores, ideal para um look moderno e elegante.",
+    sizes: ["P", "M", "G", "GG"],
+  },
+  {
     id: "calca-abertura-ziper",
     name: "Calça com abertura em zíper",
     price: 229.9,
@@ -39,6 +49,16 @@ const PRODUCTS = [
     image: "imagem/calca-masculina.jpg",
     description:
       "Calça reta em azul-marinho com abertura lateral em zíper e contraste interno em bordô.",
+    sizes: ["P", "M", "G", "GG"],
+  },
+  {
+    id: "jaqueta-transpassada",
+    name: "Jaqueta transpassada",
+    price: 159.99,
+    priceFormatted: "R$ 159,99",
+    image: "imagem/jaqueta-feminina.jpg",
+    description:
+      "Jaqueta transpassada em azul-marinho com detalhes geométricos e fechamento frontal em zíper.",
     sizes: ["P", "M", "G", "GG"],
   },
   {
@@ -61,6 +81,24 @@ const PRODUCTS = [
       "Calça de modelagem ampla com cós transpassado, amarração frontal e friso lateral bordô.",
     sizes: ["PP", "P", "M", "G"],
   },
+  {
+    id: "faixas-feneri",
+    name: "Faixas fenēri",
+    price: 45.99,
+    priceFormatted: "R$ 45,99",
+    image: "imagem/faixas-marca.jpg",
+    description: "Faixas da marca fenēri, ideais para complementar seu look.",
+    sizes: ['U'],
+  },
+  {
+    id: "chaveiro-feneri",
+    name: "Chaveiro fenēri",
+    price: 15.90,
+    priceFormatted: "R$ 15,90",
+    image: "imagem/chaveiro.jpg",
+    description: "Chaveiro da marca fenēri, ideal para levar sua marca favorita sempre com você.",
+    sizes: ['U'],
+  }
 ];
 
 // ==================== ESTADO & ELEMENTOS ====================
